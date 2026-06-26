@@ -39,11 +39,11 @@ public class Reservaciones7Cm3Application {
 
 
                 // =========================================================================
-                // 4. NUEVO USUARIO PERSONALIZADO (Cambia 'helen' e 'ipn2026' si lo deseas)
+                // 4. NUEVO USUARIO PERSONALIZADO
                 // =========================================================================
                 String miNuevaClave = encoder.encode("ipn2026"); // <-- Aquí va tu contraseña
                 jdbcTemplate.update("INSERT INTO Usuario (idUsuario, nombreDeUsuario, email, claveDeUsuario, role, habilitado, bloqueado) " +
-                        "VALUES (3, 'helen', 'helen@escom.mx', ?, 'ROLE_USER', 1, 0) " + // <-- ID: 3, Nombre: 'helen'
+                        "VALUES (3, 'David', 'david@escom.mx', ?, 'ROLE_USER', 1, 0) " +
                         "ON DUPLICATE KEY UPDATE claveDeUsuario=claveDeUsuario", miNuevaClave);
                 // =========================================================================
 
